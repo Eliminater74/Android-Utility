@@ -25,7 +25,7 @@ bpro ()
 		enter
 	else
 		bpro3
-	fi	
+	fi
 }
 
 bpro3 ()
@@ -39,8 +39,8 @@ bpro3 ()
 enterKey()
 {	echo "### Press [enter] to continue, any other key to quit";
 	read -s -n 1 key
-	if [[ $key = "" ]]; then 
-  		echo 
+	if [[ $key = "" ]]; then
+  		echo
 	else
   		echo
   		echo "Installation aborted";
@@ -54,7 +54,7 @@ enter()
 {	echo
 	echo "Please press [enter] to continue";
 	read -s -n 1 key
-	if [[ $key = "" ]]; then 
+	if [[ $key = "" ]]; then
   		echo
   		clear
 	fi
@@ -90,7 +90,7 @@ makedir ()
 	d=`date +%b%e_%H%M%S`
 	echo "Checking status of $w..."
 	load_dot
-	if [[ -s $w ]] ; then	
+	if [[ -s $w ]] ; then
 		echo
 		echo "Working folder exists, would you like to start over? [default=Y]"
 		echo
@@ -98,7 +98,7 @@ makedir ()
 		echo "  2. No"
 		echo "  3. Backup Current Working folder first"
 		read -s -n 1 ans
-		case $ans in 
+		case $ans in
 		1) echo; rm -r $w; echo "Working folder replaced "; makedirB;;
 		2) echo; echo "Working folder remained unchanged"; enter;;
 		3) echo; mv $w $w$d; echo "Working folder save to $w$d"; echo; echo "Working folder replaced "; makedirB;;
@@ -121,7 +121,7 @@ makedirBIN ()
 		echo "  1. Yes"
 		echo "  2. No"
 		read -s -n 1 ans
-		case $ans in 
+		case $ans in
 		1) echo; rm -r $w; makedirC; echo "$w replaced "; enter;;
 		2) echo; echo "/bin remained unchanged"; enter;;
 		*) echo; rm -r $w; makedirC; echo "$w replaced "; enter;;
@@ -129,7 +129,7 @@ makedirBIN ()
 	else
 		makedirC
 		enter
-	fi	
+	fi
 }
 
 
@@ -150,7 +150,7 @@ makedirC ()
 {	y=$HOME/bin
 	echo "Creating New bin Directory"
 	mkdir $y
-	echo 
+	echo
 }
 
 #quit
@@ -219,7 +219,7 @@ first_time ()
 	sudo chmod 755 /usr/local/bin/*
 	sudo chmod 755 $HOME/bin/*
 	sudo chmod 755 $HOME/android-utility/utility/*
-	sudo chmod 755 $HOME/android-utility/utility/dex/*		
+	sudo chmod 755 $HOME/android-utility/utility/dex/*
 	echo "All Done. Now, enjoy android-utility"
 	enter
 }
@@ -245,6 +245,7 @@ ins_apktool ()
 	echo
 	echo "  6.  apktool 1.3.2 experimental - fixed "-v4" and xml"
 	echo
+        echo "  7.  apktool 1.5.2"
 	echo "  x.  Keep current version"
 	echo
 	printf "Please make your selection: "
@@ -256,8 +257,9 @@ ins_apktool ()
 	 4) echo; sudo cp -v $c/apktool1.4.2/apktool.jar $u/; atool_v;;
 	 5) echo; sudo cp -v $c/apktool1.4.3/apktool.jar $u/; atool_v;;
 	 6) echo; sudo cp -v $c/apktool1.3.2mod/apktool.jar $u/; atool_v;;
+         7) echo; sudo cp -v $c/apktool1.5.2/apktool.jar $u/; atool_v;;
 	 x) echo; echo "Current version has not been changed";;
-	 *) echo; echo "$sel is not a valid option"; echo;;	
+	 *) echo; echo "$sel is not a valid option"; echo;;
 	esac
 	enter
 	}
@@ -266,7 +268,7 @@ ins_apktool ()
 atool_v ()
 {	echo
 	echo "Your version of apktool is now:"
-	echo 
+	echo
 	echo "### `apktool | sed -n 1p`"
 	}
 
@@ -283,6 +285,7 @@ ins_aapt ()
 	echo "  2.  aapt sdk  9 - Gingerbread Development"
 	echo "  3.  aapt sdk 11 - Honeycomb Development"
 	echo
+        echo "  4.  aapt sdk 12 - ICS/JB Development"
 	echo "  x.  Keep current version"
 	echo
 	echo
@@ -292,8 +295,9 @@ ins_aapt ()
 	 1) echo; sudo cp -v $c/aapt-8 $u/aapt; aapt_vv;;
 	 2) echo; sudo cp -v $c/aapt-9 $u/aapt; aapt_vv;;
 	 3) echo; sudo cp -v $c/aapt-11 $u/aapt; aapt_vv;;
+         4) echo; sudo cp -v $c/aapt-12 $u/aapt; aapt_vv;;
 	 x) echo; echo "Current version has not been changed";;
-	 *) echo; echo "$sel is not a valid option"; echo;;	
+	 *) echo; echo "$sel is not a valid option"; echo;;
 	esac
 	enter
 	}
@@ -303,7 +307,7 @@ aapt_vv ()
 {	echo
 	echo "Your version of aapt has been updated"
 }
-	
+
 ins_addon ()
 {	COM="Install new add-ons"
 	selection
@@ -313,8 +317,8 @@ ins_addon ()
 	update_script
 	enter
 	}
-	
-inst () 
+
+inst ()
 {	date +%b%e_%H%M%S
 	clear
 VERSION=`grep Version: $HOME/android-utility/README | sed 's:Version\:\ ::g'`
