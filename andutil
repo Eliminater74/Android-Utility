@@ -2,9 +2,10 @@
 
 # Android Utility Linux
 # Author: Tommy Nguyen [tommytomatoe]
-# Version: 1.1.0
+# Author: Tal Noah [talnoah]
+# Version: 1.2.0
 # Date: February 13, 2012
-# Contact: tommytomatoe@gmail.com
+# Contact: tnoah12@gmail.com
 
 #introduction
 intro ()
@@ -114,7 +115,7 @@ quit()
 else
 	echo
 	echo "Thank you for choosing Android Utility"
-	echo "brought to you by tommytomatoe :-)"
+	echo "brought to you by talnoah :-)"
 	echo
 	echo "Please Don't Drink and Drive"
 	echo
@@ -186,7 +187,7 @@ sleep .1
 echo ":"
 sleep .1
 echo
-for l in t o m m y t o m a t o e ; do
+for l in t a l n o a h ; do
 echo -n $l
 sleep .1
 done
