@@ -3,11 +3,16 @@ Version: 1.2.0
 ### Welcome to Android Utility
 # README
 # Author: Tommy Nguyen [tommytomatoe]
+# Author: Tal Noah [talnoah]
 # Date: February 13, 2012
 # Contact: tommytomatoe@gmail.com
 
-### Update. February 9, 2013
+
+### Update. February 11, 2013
 >Version 1.2.0
+>Updated Backsmali and Smali Wrappers and Jars to 1.4.1
+>Updated Pngout, Pngcrush, Advpng, and Optipng to latest Versions
+>Build Png Tools with latest toolchains
 >updated apktool for ICS, JB, and JB 4.2 Support
 >updated aapt for sdk-12 support for ICS/JB
 >Initial Update By talnoah

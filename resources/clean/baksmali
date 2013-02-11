@@ -14,9 +14,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# This script is a wrapper for smali.jar, so you can simply call "smali",
-# instead of java -jar smali.jar. It is heavily based on the "dx" script
-# from the Android SDK
+# This script is a wrapper around baksmali.jar, so you can simply call
+# "baksmali", instead of java -jar baksmali.jar. It is heavily based on
+# the "dx" script from the Android SDK
 
 # Set up prog to be the path of this script, including following symlinks,
 # and set up progdir to be the fully-qualified pathname of its directory.

@@ -1,10 +1,10 @@
 #! /bin/bash
 
 # Apk Optimization Linux
-# Author: Tommy Nguyen [tommytomatoe]
-# Version: 1.0.3
-# Date: October 04, 2011
-# Contact: tommytomatoe@gmail.com
+# Author: Tal Noah
+# Version: 1.2.0
+# Date: February 11, 2013
+# Contact: tnoah12@gmail.com
 
 
 
@@ -14,7 +14,7 @@ enter()
 {	echo
 	echo "Please press [enter] to continue";
 	read -s -n 1 key
-	if [[ $key = "" ]]; then 
+	if [[ $key = "" ]]; then
   		echo
   		clear
 	fi
@@ -42,7 +42,7 @@ load_dot ()
 
 
 
-apk_opt_script () 
+apk_opt_script ()
 {
 clear
 echo "Welcome to AU APK Optimization Tools"

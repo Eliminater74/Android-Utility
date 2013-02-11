@@ -1,10 +1,10 @@
 #! /bin/bash
 
 # Smali Script
-# Author: Tommy Nguyen [tommytomatoe]
-# Version: 1.0.2
-# Date: August 22, 2011
-# Contact: tommytomatoe@gmail.com
+# Author: Tal Noah
+# Version: 1.2.0
+# Date: February 11, 2013
+# Contact: tnoah12@gmail.com
 
 # Setting Loop Variable
 clear
@@ -16,8 +16,8 @@ APPLE=$1
 enterKey()
 {	echo "### Press [enter] to continue, any other key to quit";
 	read -s -n 1 key
-	if [[ $key = "" ]]; then 
-  		echo 
+	if [[ $key = "" ]]; then
+  		echo
 	else
   		echo
   		echo "Installation aborted";
@@ -31,7 +31,7 @@ enter()
 {	echo
 	echo "Please press [enter] to continue";
 	read -s -n 1 key
-	if [[ $key = "" ]]; then 
+	if [[ $key = "" ]]; then
   		echo
 		clear
 	fi
@@ -42,7 +42,7 @@ enterA()
 {	echo
 	echo "Please press [enter] when ready";
 	read -s -n 1 key
-	if [[ $key = "" ]]; then 
+	if [[ $key = "" ]]; then
   		echo
 	fi
 }
@@ -80,7 +80,7 @@ jar_re ()
 		fi
 	for j in *.jar ; do
 		echo "AU is smaling $j"
-		java -Xmx512M -jar $HOME/bin/smali.jar ${j/.jar}-out -o classes.dex 
+		java -Xmx512M -jar $HOME/bin/smali.jar ${j/.jar}-out -o classes.dex
 		cp $j 0original-jars/
 		echo "adding classes.dex to $j"
 		aapt r -v $j classes.dex
@@ -141,7 +141,7 @@ dex_re ()
 	if ls *.apk >&/dev/null ; then
 		for a in *.apk ; do
 			echo "AU is smaling $a"
-			java -Xmx512M -jar $HOME/bin/smali.jar ${a/.apk}-out -o classes.dex 
+			java -Xmx512M -jar $HOME/bin/smali.jar ${a/.apk}-out -o classes.dex
 			cp $a 0original-apks/
 			echo "adding classes.dex to $a"
 			aapt r -v $a classes.dex
@@ -174,7 +174,7 @@ dex2jar ()
 		enterA
 		for a in *.apk ; do
 			echo "AU is reverse coding $a -> $w/0dex2jar/${a/.apk}_dex2jar.jar"
-			$d/dex2jar.sh $a 
+			$d/dex2jar.sh $a
 			mv ${a/.apk}_dex2jar.jar 0dex2jar/${a/.apk}_dex2jar.jar
 			echo
 		done
@@ -189,7 +189,7 @@ dex2jar ()
 		enterA
 		for a in *.dex ; do
 			echo "AU is reverse coding $a -> $w/0dex2jar/${a/.dex}_dex2jar.jar"
-			$d/dex2jar.sh $a 
+			$d/dex2jar.sh $a
 			mv ${a/.dex}_dex2jar.jar 0dex2jar/${a/.dex}_dex2jar.jar
 			echo
 		done
@@ -227,7 +227,7 @@ jd_dex ()
 #quit
 quit()
 
-{	echo	
+{	echo
 	echo "Thank you for choosing Android Utility"
 	echo "brought to you by tommytomatoe :-)"
 	echo
@@ -237,7 +237,7 @@ quit()
 }
 
 
-#dex 
+#dex
 smali_s ()
 {	w=$HOME/android-utility/working-folder/mod-here-multi
 	a=$HOME/android-utility
@@ -254,7 +254,7 @@ smali_s ()
 	echo "|  1.  Decompile .jar file              |"
 	echo "|  2.  Recompile .jar file              |"
 	echo "|                                       |"
-	echo "|  3.  Decompile classes.dex/.apk file  | " 
+	echo "|  3.  Decompile classes.dex/.apk file  | "
 	echo "|  4.  Recompile classes.dex/.apk file  |"
 	echo "|                                       |"
 	echo "|  5.  Translate .dex to Java .class    | "

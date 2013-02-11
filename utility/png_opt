@@ -1,10 +1,10 @@
 #! /bin/bash
 
 # Png Optimization
-# Author: Tommy Nguyen [tommytomatoe]
-# Version: 1.0.2
-# Date: August 23, 2011
-# Contact: tommytomatoe@gmail.com
+# Author: Tal Noah
+# Version: Latest Version, Faster Optimization
+# Date: February 11, 2013
+# Contact: tnoah12@gmail.com
 
 
 
@@ -14,7 +14,7 @@ enter()
 {	echo
 	echo "Please press [enter] to continue";
 	read -s -n 1 key
-	if [[ $key = "" ]]; then 
+	if [[ $key = "" ]]; then
   		echo
   		clear
 	fi
@@ -64,11 +64,11 @@ for a in *.apk ; do
 	echo "AU will optimize the pngs in $a with pngout"
 	unzip -o $a -d ${a/.apk}-png
 	cd ${a/.apk}-png
-	find . -iname "*.png" | while read PNG 
-		do 
-		if [ `echo "$PNG" | grep -c "\.9\.png$"` -eq 0 ] ; then 
-			pngout "$PNG"  
-		fi 
+	find . -iname "*.png" | while read PNG
+		do
+		if [ `echo "$PNG" | grep -c "\.9\.png$"` -eq 0 ] ; then
+			pngout "$PNG"
+		fi
 		done
 	zip -r $w/0png-opt/$a *
 	rm -rf $w/${a/.apk}-png
@@ -100,12 +100,12 @@ for a in *.apk ; do
 	echo "AU will optimize the pngs in $a with pngcrush"
 	unzip -o $a -d ${a/.apk}-png
 	cd ${a/.apk}-png
-	find . -iname "*.png" | while read PNG 
-		do 
-		if [ `echo "$PNG" | grep -c "\.9\.png$"` -eq 0 ] ; then 
+	find . -iname "*.png" | while read PNG
+		do
+		if [ `echo "$PNG" | grep -c "\.9\.png$"` -eq 0 ] ; then
 			pngcrush "$PNG" "opt_png.png"
 			mv -f opt_png.png $PNG
-		fi 
+		fi
 		done
 	zip -r $w/0png-opt/$a *
 	rm -rf $w/${a/.apk}-png
@@ -137,11 +137,11 @@ for a in *.apk ; do
 	echo "AU will optimize the pngs in $a with optipng"
 	unzip -o $a -d ${a/.apk}-png
 	cd ${a/.apk}-png
-	find . -iname "*.png" | while read PNG 
-		do 
-		if [ `echo "$PNG" | grep -c "\.9\.png$"` -eq 0 ] ; then 
-			optipng "$PNG"  
-		fi 
+	find . -iname "*.png" | while read PNG
+		do
+		if [ `echo "$PNG" | grep -c "\.9\.png$"` -eq 0 ] ; then
+			optipng "$PNG"
+		fi
 		done
 	zip -r $w/0png-opt/$a *
 	rm -rf $w/${a/.apk}-png
@@ -173,11 +173,11 @@ for a in *.apk ; do
 	echo "AU will optimize the pngs in $a with advpng"
 	unzip -o $a -d ${a/.apk}-png
 	cd ${a/.apk}-png
-	find . -iname "*.png" | while read PNG 
-		do 
-		if [ `echo "$PNG" | grep -c "\.9\.png$"` -eq 0 ] ; then 
-			advpng -z4 "$PNG"  
-		fi 
+	find . -iname "*.png" | while read PNG
+		do
+		if [ `echo "$PNG" | grep -c "\.9\.png$"` -eq 0 ] ; then
+			advpng -z4 "$PNG"
+		fi
 		done
 	zip -r $w/0png-opt/$a *
 	rm -rf $w/${a/.apk}-png
@@ -188,7 +188,7 @@ echo "New apks might need to be resigned if third-party app"
 enter
 }
 
-apk_opt_script () 
+apk_opt_script ()
 {
 clear
 w=$HOME/android-utility/working-folder/mod-here-multi
@@ -198,7 +198,7 @@ echo
 echo "Please be aware that this process could take some time"
 echo "New "optimized" pngs will be placed in 0png-out"
 echo "New apks might need to be resigned if third-party app"
-echo 
+echo
 echo "|---------------------------------------------|"
 echo "| 1.  pngout   - best, but SLOW! read Warning |"
 echo "|              - version 07.22.2011           |"
