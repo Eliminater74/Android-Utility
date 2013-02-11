@@ -41,7 +41,7 @@ credits ()
 	echo "   ### Thanks and Credits ###"
 	echo
 	sleep .5
-	for cred in "Brut.all - apktool.jar and sound advice" "JesusFreke - baksmali.jar and smali.jar" "Stericson/JF - testsign.jar" "Pendo - sound advice/answering questions/awesome sauce" "Google - AOSP" "aamikam - sound advice" "themikmik.com - Awesome sauce" "xda developers - Roots" "JsChiSurf - sound advice" "dsixda - sound advice" "Amon_RA - sound advice" "Igor Pavlov - 7zip" "Ardfry Imaging, LLC. - pngout" "Glenn Randers-Pehrson - pngcrush" "Andrea Mazzoleni - advpng" "Cosmin Truta - optipng" "pxb1...@gmail.com - dex2jar" "Emmanuel Dupuy - JD-GUI" "misfit and leoisright - constant support" "Xclusive Rydah, Chingy - testing and ideas" ; do
+	for cred in "iBotPeaches - apktool.jar and sound advice" "JesusFreke - baksmali.jar and smali.jar" "Stericson/JF - testsign.jar" "Pendo - sound advice/answering questions/awesome sauce" "Google - AOSP" "aamikam - sound advice" "themikmik.com - Awesome sauce" "xda developers - Roots" "JsChiSurf - sound advice" "dsixda - sound advice" "Amon_RA - sound advice" "Igor Pavlov - 7zip" "Ardfry Imaging, LLC. - pngout" "Glenn Randers-Pehrson - pngcrush" "Andrea Mazzoleni - advpng" "Cosmin Truta - optipng" "pxb1...@gmail.com - dex2jar" "Emmanuel Dupuy - JD-GUI" "misfit and leoisright - constant support" "Xclusive Rydah, Chingy - testing and ideas" ; do
 		echo $cred
 		sleep .5
 	done
